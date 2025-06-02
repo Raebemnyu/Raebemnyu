@@ -1,0 +1,297 @@
+/* Base Styles */
+:root {
+  --primary-color: #3b82f6;
+  --text-color: #333;
+  --bg-color: #f0f5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 70px; /* ruang untuk fixed header */
+}
+
+/* Container umum */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header & Navbar */
+.site-header {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;  /* Menu di-center jika tanpa logo */
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+/* Jika di kemudian hari ditambahkan logo, 
+   buka baris ini dan tambahkan logo di HTML */
+/*
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: auto;  /* “dorong” menu ke kanan */
+}
+*/
+
+/* Daftar link pada navbar */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;             /* jarak antar item di layar besar */
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;        /* kalau terlalu sempit, bisa di-scroll horizontal */
+  white-space: nowrap;     /* jangan wrapping di layar lebar */
+  flex-wrap: wrap;         /* ijinkan membungkus (wrap) jika space sangat sempit */
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Responsive untuk layar ≤ 768px (Android, tablet, dll.) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  .nav-list {
+    gap: 0.8rem;               /* jarak dikurangi agar muat lebih banyak */
+    justify-content: center;   /* tetap di-center */
+  }
+  .nav-list a {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+  }
+  /* Pastikan membungkus dengan baik jika teks link terlalu panjang */
+  .nav-list li {
+    flex: 0 0 auto;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  position: relative;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.hero-content h1 span {
+  color: var(--primary-color);
+}
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #2563eb;
+}
+
+/* Blob & Image */
+.hero-image {
+  margin-top: 2rem;
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+.blob {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: var(--primary-color);
+  border-radius: 94% 31% 30% 67% / 67% 37% 56% 34%;
+  z-index: 1;
+}
+
+/* Sections */
+section {
+  padding: 2.5rem 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.skill {
+  flex: 0 0 calc(33.333% - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.skill i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Works */
+.works-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.work-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.work-item img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.75rem;
+}
+.work-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.work-item p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Contact */
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact-section input,
+.contact-section textarea {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+.contact-section button {
+  margin-top: 0.5rem;
+  max-width: 150px;
+  align-self: center;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-section button:hover {
+  background: #2563eb;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+.footer .social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+.footer .social-icons a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive tambahan untuk layar sangat kecil (≤ 480px) */
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 0.6rem;             /* jarak semakin kecil supaya muat */
+  }
+  .nav-list a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
