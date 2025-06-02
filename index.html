@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Muhamad Wahbi</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container navbar" data-aos="fade-down">
+      <!-- Tambahkan tag <ul> sebelum <li> dan hapus </ul> yang berlebih -->
+      <ul class="nav-list">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-content" data-aos="fade-right">
+      <h1>Hi,<br/>I'm <span>Muhamad Wahbi</span></h1>
+      <p>Basic Programmer, Writer & Crochet</p>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <div class="blob"></div>
+      <img src="MyImage-1743877449-03.jpg" alt="Profile Picture" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Perkenalkan, saya Muhamad Wahbi, siswa SMK Hasyim Asy'ari Bojong yang memiliki minat besar di bidang teknologi, sastra, dan pelestarian lingkungan. Saat ini saya tengah mendalami pengembangan web dan penulisan karya sastra, khususnya puisi dan fiksi. Saya juga memiliki kemampuan dasar dalam pemrograman.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill"><i class="fab fa-php"></i><span>Php</span></div>
+      <div class="skill"><i class="fas fa-pen-nib"></i><span>Writing</span></div>
+      <div class="skill"><i class="fas fa-swatchbook"></i><span>Knitting</span></div>
+    </div>
+  </section>
+
+  <!-- Works Section -->
+  <section id="works" class="works-section" data-aos="fade-up">
+    
+    <h2>Works</h2>
+    <div class="works-container">
+      <div class="work-item">
+        <h3>Project One</h3>
+        <img src="IMG_20250528_205903.jpg" alt="Project 1" />
+        <p>Pada Project One, saya menghadirkan website organisasi pertama yang saya bangun dari nol. Desainnya menerapkan prinsip responsif, sehingga konten (profil, visi-misi, dan agenda kegiatan) dapat diakses dengan nyaman baik di desktop maupun perangkat mobile. Saya menggunakan HTML, CSS, dan JavaScript dasar untuk struktur dan animasi ringan, serta mempraktikkan teknik pengorganisasian file yang rapi agar mudah dikembangkan. Melalui proyek ini, saya belajar implementasi layout grid, navigasi intuitif, dan optimasi performa dasar sehingga website memuat cepat meski koneksi terbatas.
+   .</p>
+      </div>
+      <div class="work-item">
+        <h3>Project Two</h3>
+        <img src="IMG_20250528_205350.jpg" alt="Project 2" />
+        <p>Project Two menampilkan halaman Blogger sederhana namun fungsional, di mana saya mempublikasikan tiga tulisan fiksi awal saya. Setiap posting dilengkapi judul, tanggal publikasi, dan cuplikan singkat, tersusun dalam tata letak bersih yang memprioritaskan pembaca. Meskipun masih terbatas pada tiga artikel, saya fokus pada konsistensi tema visual—memadukan font yang mudah dibaca, spasi antar paragraf yang seimbang, dan gambar pendukung yang relevan. Proyek ini mengasah kemampuan saya dalam menulis, memilih topik, serta memahami user flow di platform blogging..</p>
+      </div>
+      <div class="work-item">
+        <h3>Project Three</h3>
+        <!-- Perbaikan tag img (hilangkan tanda kutip ganda dan tutup tag) -->
+        <img src="PXL_20250504_143831857.jpg" alt="Project 3" />
+        <p>
+          Koleksi hasil rajut ini merupakan sebuah karya handmade yang saya buat dengan penuh ketelitian dan kreativitas. 
+          Mulai dari tas rajut multifungsi, pouch, hingga aksesoris unik lainnya. Setiap produk dibuat dengan benang 
+          berkualitas dan detail yang rapi, cocok untuk kebutuhan sehari-hari maupun sebagai hadiah spesial.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS (Animate On Scroll) JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: true
+    });
+  </script>
+
+  <footer style="text-align:center; margin-top:60px; padding:20px; border-top:1px solid rgba(255,255,255,0.2);">
+    <div class="social-icons">
+      <a href="https://facebook.com/begundal apcb"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/dariakhirkanudahkubilang"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/raebemnyu"><i class="fab fa-github"></i></a>
+      <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://raebemnyuspace.blogspot.com"><i class="fab fa-blogger"></i></a>
+      <a href="https://linkedin.com/in/raebemnyu"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p style="color: #ccc; font-size: 0.9rem; margin-top: 10px;">&copy; 2025 Muhamad Wahbi</p>
+  </footer>
+</body>
+</html>
